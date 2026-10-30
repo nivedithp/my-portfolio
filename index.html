@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nivedith P – AI/ML Engineer | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #090b10;
+  --bg-gradient: radial-gradient(circle at 50% 0%, #151a26 0%, #090b10 80%);
+  --panel: #12151f;
+  --panel-hover: #191e2c;
+  --line: #222738;
+  --text: #e6e9f0;
+  --muted: #8c96ab;
+  --signal: #f5c400;
+  --signal-glow: rgba(245, 196, 0, 0.35);
+  --signal-soft: rgba(245, 196, 0, 0.12);
+  --on-signal: #090b10;
+  --accent: #38bdf8;
+  --display: "Big Shoulders Display", "Impact", "Arial Narrow", sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+  --mono: "JetBrains Mono", monospace;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #eceef2;
+    --panel: #ffffff;
+    --panel-hover: #f7f8fa;
+    --line: #cfd3dc;
+    --text: #14161c;
+    --muted: #555d70;
+    --signal: #c99a00;
+    --signal-glow: rgba(201, 154, 0, 0.35);
+    --signal-soft: rgba(201, 154, 0, 0.12);
+    --on-signal: #0d0f14;
+    --bg-gradient: radial-gradient(circle at 50% 0%, #ffffff 0%, #eceef2 80%);
+  }
+}
+
+:root[data-theme="light"] {
+  --bg: #eceef2;
+  --panel: #ffffff;
+  --panel-hover: #f7f8fa;
+  --line: #cfd3dc;
+  --text: #14161c;
+  --muted: #555d70;
+  --signal: #c99a00;
+  --signal-glow: rgba(201, 154, 0, 0.35);
+  --signal-soft: rgba(201, 154, 0, 0.12);
+  --on-signal: #0d0f14;
+  --bg-gradient: radial-gradient(circle at 50% 0%, #ffffff 0%, #eceef2 80%);
+}
+
+html {
+  scroll-padding-top: 76px;
+  scroll-behavior: smooth;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image: var(--bg-gradient);
+  color: var(--text);
+  font: 400 1.0625rem/1.65 var(--body);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+:focus-visible {
+  outline: 3px solid var(--signal);
+  outline-offset: 3px;
+}
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(9, 11, 16, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  transition: border-color 0.3s ease;
+}
+nav .wrap {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  height: 64px;
+}
+nav .mark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font: 900 1.45rem var(--display);
+  letter-spacing: .06em;
+  color: var(--signal);
+  margin-right: auto;
+  white-space: nowrap;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+nav .mark:hover {
+  transform: translateY(-1px);
+  filter: drop-shadow(0 0 10px var(--signal));
+}
+.bat-nav-icon {
+  width: 38px;
+  height: 14px;
+  fill: var(--signal);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+nav .mark:hover .bat-nav-icon {
+  transform: scale(1.15) rotate(-3deg);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  overflow-x: auto;
+}
+nav a:not(.mark) {
+  position: relative;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: .95rem;
+  white-space: nowrap;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+nav a:not(.mark)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--signal);
+  box-shadow: 0 0 8px var(--signal);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+nav a:not(.mark):hover {
+  color: var(--text);
+}
+nav a:not(.mark):hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  --x: 72%;
+  --y: 35%;
+  padding-top: 40px;
+  padding-bottom: 120px;
+}
+
+/* Interactive Bat-Signal Searchlight */
+.hero-searchlight {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(circle 340px at var(--x) var(--y), transparent 0%, rgba(245, 196, 0, 0.05) 40%, rgba(9, 11, 16, 0.94) 100%);
+  transition: opacity 0.4s ease;
+}
+.bat-signal-projector {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 82px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 25px rgba(245, 196, 0, 0.75)) drop-shadow(0 0 60px rgba(245, 196, 0, 0.3));
+  transition: opacity 0.3s ease, transform 0.1s ease-out;
+  animation: batSignalPulse 4s infinite ease-in-out;
+}
+.bat-signal-projector svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--signal);
+}
+@keyframes batSignalPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.82; }
+  50% { transform: translate(-50%, -50%) scale(1.08); opacity: 0.98; filter: drop-shadow(0 0 35px rgba(245, 196, 0, 0.95)) drop-shadow(0 0 80px rgba(245, 196, 0, 0.5)); }
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-content {
+  animation: heroSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--signal-soft);
+  border: 1px solid rgba(245, 196, 0, 0.3);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--signal);
+  margin-bottom: 22px;
+  box-shadow: 0 0 15px rgba(245, 196, 0, 0.15);
+  animation: fadeIn 0.8s ease forwards;
+}
+.bat-mini-svg {
+  width: 24px;
+  height: 9px;
+  fill: currentColor;
+}
+.pulse-beacon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 10px var(--signal);
+  animation: beaconPulse 1.8s infinite ease-in-out;
+}
+@keyframes beaconPulse {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.4); opacity: 1; box-shadow: 0 0 14px var(--signal); }
+  100% { transform: scale(0.9); opacity: 0.6; }
+}
+
+.hero h1 {
+  margin: 0;
+  font: 900 clamp(3.2rem, 7.5vw, 5.8rem)/0.92 var(--display);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+.hero h1 span {
+  color: var(--signal);
+  text-shadow: 0 0 25px rgba(245, 196, 0, 0.5);
+}
+.hero p.role {
+  margin: 22px 0 0;
+  font: 600 clamp(1.2rem, 2.5vw, 1.6rem) var(--body);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero p.role::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 3px;
+  background: var(--signal);
+}
+.hero p.pitch {
+  margin: 14px 0 32px;
+  max-width: 50ch;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border: 2px solid var(--signal);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+.btn.fill {
+  background: var(--signal);
+  color: var(--on-signal);
+  box-shadow: 0 4px 20px rgba(245, 196, 0, 0.3);
+}
+.btn.fill:hover {
+  background: #ffcf1a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(245, 196, 0, 0.5);
+}
+.btn:not(.fill) {
+  background: transparent;
+  color: var(--text);
+}
+.btn:not(.fill):hover {
+  background: var(--signal-soft);
+  color: #fff;
+  transform: translateY(-3px);
+  border-color: #ffd026;
+  box-shadow: 0 6px 25px rgba(245, 196, 0, 0.2);
+}
+
+/* Batman Artwork Card in Hero */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: heroSlideRight 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.batman-card {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(245, 196, 0, 0.3) 0%, rgba(34, 39, 56, 0.6) 40%, rgba(18, 21, 31, 0.95) 100%);
+  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85), 0 0 30px rgba(245, 196, 0, 0.15);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  animation: floatCard 6s infinite ease-in-out;
+}
+.batman-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 35px 80px -10px rgba(0, 0, 0, 0.9), 0 0 45px rgba(245, 196, 0, 0.35);
+}
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.batman-img-wrap {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 16 / 10;
+}
+.batman-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+.batman-card:hover .batman-img {
+  transform: scale(1.06);
+  filter: contrast(1.08) brightness(1.05);
+}
+.batman-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(9, 11, 16, 0.92) 0%, rgba(9, 11, 16, 0.2) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  pointer-events: none;
+}
+.batman-hud-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--signal);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+.batman-hud-desc {
+  font-size: 0.85rem;
+  color: #d1d5db;
+  margin: 0;
+}
+
+/* Skyline Silhouette */
+.skyline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 110px;
+  z-index: 4;
+  fill: var(--panel);
+  pointer-events: none;
+  filter: drop-shadow(0 -4px 15px rgba(0,0,0,0.5));
+}
+
+/* Sections */
+section {
+  position: relative;
+  padding: 100px 0;
+  border-top: 1px solid var(--line);
+}
+section.first {
+  border-top: 0;
+}
+h2 {
+  margin: 0 0 44px;
+  font: 900 clamp(2.4rem, 5.5vw, 3.6rem)/1 var(--display);
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+h2::before {
+  content: "";
+  width: 6px;
+  height: 1.1em;
+  background: var(--signal);
+  box-shadow: 0 0 12px var(--signal);
+  border-radius: 2px;
+}
+.section-subtitle {
+  margin: -32px 0 40px 24px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* About Section & Aligned Profile Card */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+}
+.about-bio p {
+  margin: 0 0 1.2em;
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+.quote-banner {
+  margin: 28px 0 0;
+  padding: 18px 24px;
+  background: var(--panel);
+  border-left: 4px solid var(--signal);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.quote-bat {
+  width: 44px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: var(--signal);
+}
+
+/* Perfectly Aligned Profile Showcase Card */
+.profile-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.profile-card:hover {
+  border-color: rgba(245, 196, 0, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(245, 196, 0, 0.12);
+  transform: translateY(-4px);
+}
+.profile-photo-container {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo-glow-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px dashed rgba(245, 196, 0, 0.45);
+  animation: spinSlow 20s linear infinite;
+  pointer-events: none;
+}
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.photo {
+  position: relative;
+  display: block;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 4px solid var(--signal);
+  box-shadow: 0 0 25px rgba(245, 196, 0, 0.35);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.profile-card:hover .photo {
+  transform: scale(1.04);
+}
+.photo-bat-badge {
+  position: absolute;
+  bottom: 0;
+  right: 12px;
+  width: 56px;
+  height: 22px;
+  border-radius: 50%;
+  background: #090b10;
+  border: 2px solid var(--signal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+.photo-bat-badge svg {
+  width: 28px;
+  height: 11px;
+  fill: var(--signal);
+}
+.profile-card:hover .photo-bat-badge {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.profile-meta h3 {
+  margin: 0;
+  font: 900 1.6rem var(--display);
+  letter-spacing: 0.04em;
+  color: var(--text);
+  text-transform: uppercase;
+}
+.profile-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0 20px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 10px #22c55e;
+  animation: beaconPulse 2s infinite ease-in-out;
+}
+
+.facts {
+  width: 100%;
+  margin: 0;
+  padding: 16px 20px;
+  background: rgba(9, 11, 16, 0.5);
+  border-radius: 8px;
+  border-left: 3px solid var(--signal);
+  text-align: left;
+}
+.facts dt {
+  color: var(--muted);
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--mono);
+}
+.facts dd {
+  margin: 2px 0 14px;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.98rem;
+}
+.facts dd:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tags li {
+  padding: 9px 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: default;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+.tags li:hover {
+  border-color: var(--signal);
+  color: var(--signal);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(245, 196, 0, 0.2);
+}
+
+/* Work / Cases */
+.cases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+.case {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--signal);
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.case:hover {
+  transform: translateY(-8px);
+  border-color: rgba(245, 196, 0, 0.4);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 25px rgba(245, 196, 0, 0.18);
+}
+.case h3 {
+  margin: 0 0 8px;
+  font: 900 1.85rem/1.1 var(--display);
+  text-transform: uppercase;
+  color: #fff;
+}
+.case .stack {
+  color: var(--signal);
+  font-family: var(--mono);
+  font-size: .85rem;
+  margin: 0 0 16px;
+  letter-spacing: .02em;
+}
+.case p {
+  margin: 0 0 24px;
+  flex: 1;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--signal);
+  transition: transform 0.2s ease, gap 0.2s ease;
+}
+.case-link:hover {
+  gap: 12px;
+}
+.case-link svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  transition: transform 0.2s ease;
+}
+.case-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* Timeline */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 28px;
+  border-left: 2px solid var(--line);
+}
+.timeline li {
+  position: relative;
+  padding: 0 0 40px 24px;
+}
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  background: var(--signal);
+  transform: rotate(45deg);
+  box-shadow: 0 0 12px var(--signal);
+  transition: transform 0.3s ease;
+}
+.timeline li:hover::before {
+  transform: rotate(225deg) scale(1.2);
+}
+.timeline h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+.timeline .when {
+  color: var(--signal);
+  font-family: var(--mono);
+  font-size: .88rem;
+  margin: 4px 0 10px;
+}
+.timeline p {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--muted);
+}
+.cert-title {
+  margin: 48px 0 20px;
+  font: 800 1.6rem var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cert-title::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 1em;
+  background: var(--signal);
+}
+
+/* Contact */
+.contact {
+  display: grid;
+  gap: 14px;
+  max-width: 580px;
+}
+.contact a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.contact a span {
+  color: var(--muted);
+  font-weight: 400;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+.contact a:hover {
+  border-color: var(--signal);
+  transform: translateX(6px);
+  box-shadow: 0 4px 20px rgba(245, 196, 0, 0.15);
+}
+.contact a:hover span {
+  color: var(--signal);
+}
+
+/* Footer */
+footer {
+  padding: 44px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .95rem;
+  background: #06070a;
+}
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-bat {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--signal);
+  font-weight: 600;
+}
+.footer-bat svg {
+  width: 32px;
+  height: 12px;
+  fill: currentColor;
+}
+
+/* Scroll Entrance Animations */
+.animate-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.animate-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes heroSlideUp {
+  from { opacity: 0; transform: translateY(35px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroSlideRight {
+  from { opacity: 0; transform: translateX(35px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hero-visual {
+    order: -1;
+  }
+  .batman-card {
+    max-width: 360px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  section {
+    padding: 72px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    padding: 0 18px;
+  }
+  .hero {
+    min-height: auto;
+    padding-top: 24px;
+    padding-bottom: 100px;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .btns {
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .profile-card {
+    padding: 24px 18px;
+  }
+  .contact a {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn:hover, .tags li:hover, .case:hover, .contact a:hover { transform: none; }
+  .animate-reveal { opacity: 1 !important; transform: none !important; }
+  .batman-card, .photo-glow-ring, .bat-signal-projector { animation: none !important; }
+}
+
+/* ===================================================
+   BATMAN CUSTOM CURSOR (Pinterest / Gotham Edition)
+=================================================== */
+html, body, * {
+  cursor: url("data:image/svg+xml;utf8,%3Csvg xmlns%3D%27http%3A//www.w3.org/2000/svg%27 width%3D%2734%27 height%3D%2734%27 viewBox%3D%270 0 205 75%27%3E%0A  %3Cdefs%3E%0A    %3Cfilter id%3D%27batglow%27 x%3D%27-20%25%27 y%3D%27-20%25%27 width%3D%27140%25%27 height%3D%27140%25%27%3E%0A      %3CfeDropShadow dx%3D%270%27 dy%3D%271%27 stdDeviation%3D%271.5%27 flood-color%3D%27%2523f5c400%27 flood-opacity%3D%270.75%27/%3E%0A    %3C/filter%3E%0A  %3C/defs%3E%0A  %3Cpath d%3D%27M 0%2C42 L 18%2C33 L 37%2C33 L 50%2C40 L 59%2C54 L 70%2C50 L 87%2C52 L 98%2C62 L 103%2C74 L 107%2C64 L 116%2C54 L 124%2C50 L 136%2C50 L 145%2C54 L 150%2C45 L 164%2C34 L 181%2C32 L 204%2C40 L 186%2C18 L 173%2C9 L 155%2C2 L 141%2C0 L 137%2C10 L 128%2C20 L 112%2C28 L 108%2C16 L 105%2C22 L 100%2C22 L 96%2C16 L 94%2C27 L 90%2C28 L 75%2C20 L 68%2C13 L 64%2C1 L 59%2C0 L 40%2C5 L 22%2C15 L 6%2C31 Z%27 fill%3D%27%2523090b10%27 stroke%3D%27%2523f5c400%27 stroke-width%3D%274%27 stroke-linejoin%3D%27round%27 filter%3D%27url%28%2523batglow%29%27/%3E%0A%3C/svg%3E") 10 3, auto;utf8,%3Csvg xmlns%3D%27http%3A//www.w3.org/2000/svg%27 width%3D%2732%27 height%3D%2732%27 viewBox%3D%270 0 32 32%27%3E%0A  %3Cdefs%3E%0A    %3Cfilter id%3D%27batshadow%27 x%3D%27-30%25%27 y%3D%27-30%25%27 width%3D%27160%25%27 height%3D%27160%25%27%3E%0A      %3CfeDropShadow dx%3D%270%27 dy%3D%271.5%27 stdDeviation%3D%271.5%27 flood-color%3D%27%2523f5c400%27 flood-opacity%3D%270.65%27/%3E%0A    %3C/filter%3E%0A  %3C/defs%3E%0A  %3Cpath d%3D%27M2%2C2 L14%2C26 L17%2C17 L26%2C26 L29%2C23 L20%2C14 L29%2C11 Z%27 fill%3D%27%2523090b10%27 stroke%3D%27%2523f5c400%27 stroke-width%3D%271.8%27 stroke-linejoin%3D%27round%27 filter%3D%27url%28%2523batshadow%29%27/%3E%0A  %3Cpath d%3D%27M7%2C7 L12%2C18 L14%2C14 L18%2C18 L19%2C17 L15%2C13 L19%2C11 Z%27 fill%3D%27%2523f5c400%27/%3E%0A%3C/svg%3E") 2 2, auto;
+}
+
+a, button, .btn, .tags li, .case, .contact a, [role="button"], input, label, .batman-card, .mark {
+  cursor: url("data:image/svg+xml;utf8,%3Csvg xmlns%3D%27http%3A//www.w3.org/2000/svg%27 width%3D%2744%27 height%3D%2726%27 viewBox%3D%270 0 205 75%27%3E%0A  %3Cdefs%3E%0A    %3Cfilter id%3D%27hoverglow%27 x%3D%27-30%25%27 y%3D%27-30%25%27 width%3D%27160%25%27 height%3D%27160%25%27%3E%0A      %3CfeDropShadow dx%3D%270%27 dy%3D%270%27 stdDeviation%3D%274%27 flood-color%3D%27%2523f5c400%27 flood-opacity%3D%270.95%27/%3E%0A    %3C/filter%3E%0A  %3C/defs%3E%0A  %3Cpath d%3D%27M 0%2C42 L 18%2C33 L 37%2C33 L 50%2C40 L 59%2C54 L 70%2C50 L 87%2C52 L 98%2C62 L 103%2C74 L 107%2C64 L 116%2C54 L 124%2C50 L 136%2C50 L 145%2C54 L 150%2C45 L 164%2C34 L 181%2C32 L 204%2C40 L 186%2C18 L 173%2C9 L 155%2C2 L 141%2C0 L 137%2C10 L 128%2C20 L 112%2C28 L 108%2C16 L 105%2C22 L 100%2C22 L 96%2C16 L 94%2C27 L 90%2C28 L 75%2C20 L 68%2C13 L 64%2C1 L 59%2C0 L 40%2C5 L 22%2C15 L 6%2C31 Z%27 fill%3D%27%2523f5c400%27 stroke%3D%27%2523090b10%27 stroke-width%3D%273%27 stroke-linejoin%3D%27round%27 filter%3D%27url%28%2523hoverglow%29%27/%3E%0A%3C/svg%3E") 22 8, pointer;utf8,%3Csvg xmlns%3D%27http%3A//www.w3.org/2000/svg%27 width%3D%2738%27 height%3D%2726%27 viewBox%3D%270 0 512 300%27%3E%0A  %3Cdefs%3E%0A    %3Cfilter id%3D%27batglow%27 x%3D%27-30%25%27 y%3D%27-30%25%27 width%3D%27160%25%27 height%3D%27160%25%27%3E%0A      %3CfeDropShadow dx%3D%270%27 dy%3D%270%27 stdDeviation%3D%2718%27 flood-color%3D%27%2523f5c400%27 flood-opacity%3D%270.95%27/%3E%0A    %3C/filter%3E%0A  %3C/defs%3E%0A  %3Cpath d%3D%27M256 76 C250 76 244 79 240 84 L235 62 L210 88 C190 75 160 70 130 76 C100 82 72 98 50 122 C30 144 14 172 0 202 C30 192 65 190 98 198 C105 178 122 162 144 158 C158 155 173 158 185 166 C178 180 178 196 184 210 C206 196 230 190 256 190 C282 190 306 196 328 210 C334 196 334 180 327 166 C339 158 354 155 368 158 C390 162 407 178 414 198 C447 190 482 192 512 202 C498 172 482 144 462 122 C440 98 412 82 382 76 C352 70 322 75 302 88 L277 62 L272 84 C268 79 262 76 256 76 Z%27%0A        fill%3D%27%2523f5c400%27 stroke%3D%27%2523090b10%27 stroke-width%3D%2714%27 filter%3D%27url%28%2523batglow%29%27/%3E%0A%3C/svg%3E") 19 13, pointer;
+}
+
+/* Dynamic Batman Cursor Follower */
+.bat-cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 16px;
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease, width 0.25s ease, height 0.25s ease;
+  will-change: transform;
+}
+.bat-cursor-glow svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--signal);
+  filter: drop-shadow(0 0 8px rgba(245, 196, 0, 0.8)) drop-shadow(0 0 16px rgba(245, 196, 0, 0.4));
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.25s ease;
+}
+.bat-cursor-glow.is-hovering {
+  width: 56px;
+  height: 22px;
+}
+.bat-cursor-glow.is-hovering svg {
+  transform: scale(1.25) rotate(-6deg);
+  filter: drop-shadow(0 0 16px rgba(245, 196, 0, 1)) drop-shadow(0 0 30px rgba(245, 196, 0, 0.7));
+}
+.bat-cursor-glow.is-clicking svg {
+  transform: scale(0.8) rotate(6deg);
+}
+
+/* Click Ripple */
+.bat-ripple {
+  position: fixed;
+  border-radius: 50%;
+  border: 2px solid var(--signal);
+  box-shadow: 0 0 14px var(--signal);
+  transform: translate(-50%, -50%) scale(0.3);
+  pointer-events: none;
+  z-index: 99998;
+  animation: batRippleAnim 0.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+@keyframes batRippleAnim {
+  to {
+    transform: translate(-50%, -50%) scale(2.6);
+    opacity: 0;
+  }
+}
+
+@media (hover: none) or (pointer: coarse) {
+  .bat-cursor-glow, .bat-ripple {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top">
+      <svg class="bat-nav-icon" viewBox="0 0 205 75" aria-hidden="true">
+        <path d="M 0,42 L 18,33 L 37,33 L 50,40 L 59,54 L 70,50 L 87,52 L 98,62 L 103,74 L 107,64 L 116,54 L 124,50 L 136,50 L 145,54 L 150,45 L 164,34 L 181,32 L 204,40 L 186,18 L 173,9 L 155,2 L 141,0 L 137,10 L 128,20 L 112,28 L 108,16 L 105,22 L 100,22 L 96,16 L 94,27 L 90,28 L 75,20 L 68,13 L 64,1 L 59,0 L 40,5 L 22,15 L 6,31 Z"/>
+      </svg>
+      <span>NIVEDITH P</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section with Searchlight, Bat-Signal & Batman Image -->
+<header class="hero" id="top">
+  <div class="hero-searchlight"></div>
+  
+  <!-- Interactive Glowing Bat-Signal Projector in the sky -->
+  <div class="bat-signal-projector" aria-hidden="true" title="Gotham Bat-Signal">
+    <svg viewBox="0 0 205 75">
+      <path d="M 0,42 L 18,33 L 37,33 L 50,40 L 59,54 L 70,50 L 87,52 L 98,62 L 103,74 L 107,64 L 116,54 L 124,50 L 136,50 L 145,54 L 150,45 L 164,34 L 181,32 L 204,40 L 186,18 L 173,9 L 155,2 L 141,0 L 137,10 L 128,20 L 112,28 L 108,16 L 105,22 L 100,22 L 96,16 L 94,27 L 90,28 L 75,20 L 68,13 L 64,1 L 59,0 L 40,5 L 22,15 L 6,31 Z"/>
+    </svg>
+  </div>
+
+  <div class="wrap">
+    <div class="hero-grid">
+      <!-- Left Column: Copy & Actions -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg class="bat-mini-svg" viewBox="0 0 205 75"><path d="M 0,42 L 18,33 L 37,33 L 50,40 L 59,54 L 70,50 L 87,52 L 98,62 L 103,74 L 107,64 L 116,54 L 124,50 L 136,50 L 145,54 L 150,45 L 164,34 L 181,32 L 204,40 L 186,18 L 173,9 L 155,2 L 141,0 L 137,10 L 128,20 L 112,28 L 108,16 L 105,22 L 100,22 L 96,16 L 94,27 L 90,28 L 75,20 L 68,13 L 64,1 L 59,0 L 40,5 L 22,15 L 6,31 Z"/></svg>
+          <span class="pulse-beacon"></span>
+          <span>BAT-SIGNAL ACTIVE // BENGALURU, IN</span>
+        </div>
+
+        <h1>Nivedith <span>P</span></h1>
+        <p class="role">Aspiring AI/ML Engineer</p>
+        <p class="pitch">Building high-impact machine learning and computer vision architectures with Python. Open for AI &amp; Software Engineering internships.</p>
+        
+        <div class="btns">
+          <a class="btn fill" href="#work">
+            <span>Explore Work</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l10-10M17 7H7M17 7v10"/></svg>
+          </a>
+          <a class="btn" href="#contact">Get In Touch</a>
+          <a class="btn" href="Nivedith_P_Resume.pdf" download>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <span>Resume</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Cinematic Batman Hero Artwork Card -->
+      <div class="hero-visual">
+        <div class="batman-card" id="batmanCard">
+          <div class="batman-img-wrap">
+            <img class="batman-img" src="batman-hero.jpg" alt="Batman overlooking Gotham City skyline with Bat-Signal" loading="eager">
+            <div class="batman-overlay">
+              <span class="batman-hud-tag">
+                <svg width="16" height="10" viewBox="0 0 205 75" fill="currentColor"><path d="M 0,42 L 18,33 L 37,33 L 50,40 L 59,54 L 70,50 L 87,52 L 98,62 L 103,74 L 107,64 L 116,54 L 124,50 L 136,50 L 145,54 L 150,45 L 164,34 L 181,32 L 204,40 L 186,18 L 173,9 L 155,2 L 141,0 L 137,10 L 128,20 L 112,28 L 108,16 L 105,22 L 100,22 L 96,16 L 94,27 L 90,28 L 75,20 L 68,13 L 64,1 L 59,0 L 40,5 L 22,15 L 6,31 Z"/></svg>
+                GOTHAM // NIGHT PROTOCOL
+              </span>
+              <p class="batman-hud-desc">Code in the shadows, deploy in the light.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gotham Skyline SVG -->
+  <svg class="skyline" viewBox="0 0 1200 110" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 110V70h40V50h30V74h36V30h24V16h14V30h24V64h40V44h34V78h30V56h26V22h18V8h12V22h18V60h44V40h30V80h38V58h28V34h36V70h32V50h30V84h40V62h26V28h22V14h10V28h22V66h36V46h34V76h30V54h28V90h40V60h32V36h26V70h38V48h30V82h34V58h24V26h20V12h10V26h20V64h40V44h32V78h36V56h30V86h40V62h28V40h34V74h30V52h26V88h38V110Z"/>
+  </svg>
+</header>
+
+<main>
+<!-- About Section with Aligned Profile Card -->
+<section class="first" id="about">
+  <div class="wrap">
+    <h2 class="animate-reveal">About</h2>
+    <div class="about-grid">
+      <!-- Left: Bio & Philosophy -->
+      <div class="about-bio animate-reveal">
+        <p>I am an <strong>MCA student specializing in AI &amp; Machine Learning</strong> at Presidency University, Bengaluru, holding a strong Computer Applications foundation (BCA) from Kannur University.</p>
+        <p>I engineer intelligent systems that bridge cutting-edge deep learning with real-world computer vision solutions. My toolkit is centered on <strong>Python, OpenCV, MediaPipe, Scikit-learn, and Java</strong>.</p>
+        <p>Currently expanding expertise in scalable backend architectures and production ML pipelines. Actively seeking AI, Machine Learning, and Python software engineering internships in Bengaluru or remote roles.</p>
+        
+        <div class="quote-banner">
+          <svg class="quote-bat" viewBox="0 0 205 75"><path d="M 0,42 L 18,33 L 37,33 L 50,40 L 59,54 L 70,50 L 87,52 L 98,62 L 103,74 L 107,64 L 116,54 L 124,50 L 136,50 L 145,54 L 150,45 L 164,34 L 181,32 L 204,40 L 186,18 L 173,9 L 155,2 L 141,0 L 137,10 L 128,20 L 112,28 L 108,16 L 105,22 L 100,22 L 96,16 L 94,27 L 90,28 L 75,20 L 68,13 L 64,1 L 59,0 L 40,5 L 22,15 L 6,31 Z"/></svg>
+          <div>"It's not who I am underneath, but what I build that defines me."</div>
+        </div>
+      </div>
+
+      <!-- Right: Aligned Profile Card -->
+      <div class="profile-card animate-reveal">
+        <div class="profile-photo-container">
+          <div class="photo-glow-ring"></div>
+          <img class="photo" src="data:image/jpeg;base64,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" alt="Portrait of Nivedith P">
+          <div class="photo-bat-badge" title="Bat-Emblem Badge">
+            <svg viewBox="0 0 205 75"><path d="M 0,42 L 18,33 L 37,33 L 50,40 L 59,54 L 70,50 L 87,52 L 98,62 L 103,74 L 107,64 L 116,54 L 124,50 L 136,50 L 145,54 L 150,45 L 164,34 L 181,32 L 204,40 L 186,18 L 173,9 L 155,2 L 141,0 L 137,10 L 128,20 L 112,28 L 108,16 L 105,22 L 100,22 L 96,16 L 94,27 L 90,28 L 75,20 L 68,13 L 64,1 L 59,0 L 40,5 L 22,15 L 6,31 Z"/></svg>
+          </div>
+        </div>
+
+        <div class="profile-meta">
+          <h3>Nivedith P</h3>
+          <div class="profile-status">
+            <span class="status-indicator"></span>
+            <span>Open to Internships (Batch of 2027)</span>
+          </div>
+        </div>
+
+        <dl class="facts">
+          <dt>Location</dt>
+          <dd>Kannur, Kerala · In Bengaluru</dd>
+          
+          <dt>Primary Domain</dt>
+          <dd>AI/ML &amp; Computer Vision (Python)</dd>
+          
+          <dt>Academics</dt>
+          <dd>MCA (AI/ML) · Semester 1 SGPA: 8.1 / 10</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+  <div class="wrap">
+    <h2 class="animate-reveal">Skills &amp; Technologies</h2>
+    <ul class="tags animate-reveal">
+      <li>Python</li>
+      <li>Machine Learning</li>
+      <li>Computer Vision</li>
+      <li>OpenCV</li>
+      <li>MediaPipe</li>
+      <li>Scikit-learn</li>
+      <li>NumPy</li>
+      <li>Pandas</li>
+      <li>Streamlit</li>
+      <li>Java</li>
+      <li>Socket Programming</li>
+      <li>C</li>
+      <li>SQL</li>
+      <li>DBMS</li>
+      <li>Data Structures &amp; Algorithms</li>
+      <li>Object-Oriented Programming</li>
+      <li>Git &amp; GitHub</li>
+      <li>Jupyter Notebook</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Work Section -->
+<section id="work">
+  <div class="wrap">
+    <h2 class="animate-reveal">Featured Projects</h2>
+    <div class="cases">
+      <article class="case animate-reveal">
+        <h3>AI Digital Eye-Strain &amp; Health Monitor</h3>
+        <p class="stack">Python · OpenCV · MediaPipe · Scikit-learn · Streamlit</p>
+        <p>A real-time computer vision system that tracks webcam feeds with MediaPipe Face Mesh and a trained Random Forest classifier. Accurately evaluates eye strain, posture degradation, and user fatigue using dynamic Eye Aspect Ratio (EAR) blink detection, broadcasting real-time metrics on an interactive Streamlit dashboard with voice alert intervention.</p>
+        <a class="case-link" href="https://github.com/nivedithp" target="_blank" rel="noopener noreferrer">
+          <span>View on GitHub</span>
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+        </a>
+      </article>
+
+      <article class="case animate-reveal">
+        <h3>NovaShare: LAN File Transfer App</h3>
+        <p class="stack">Java · Swing GUI · Socket Programming · Multithreading</p>
+        <p>A high-speed peer-to-peer desktop file exchange application transmitting multi-gigabyte payloads across local area networks via TCP sockets. Features an ergonomic Java Swing drag-and-drop interface, multi-threaded buffered IO streams, live transfer progress gauges, and real-time MB/s bandwidth calculation.</p>
+        <a class="case-link" href="https://github.com/nivedithp" target="_blank" rel="noopener noreferrer">
+          <span>View on GitHub</span>
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Education & Certifications -->
+<section id="education">
+  <div class="wrap">
+    <h2 class="animate-reveal">Education</h2>
+    <ul class="timeline animate-reveal">
+      <li>
+        <h3>Master of Computer Applications (MCA) – Presidency University, Bangalore</h3>
+        <p class="when">2025 – 2027</p>
+        <p>Specialization in AI &amp; Machine Learning. Achieved SGPA of <strong>8.1 / 10</strong> in Semester 1.</p>
+      </li>
+      <li>
+        <h3>Bachelor of Computer Applications (BCA) – Morazha Co-operative Arts &amp; Science College</h3>
+        <p class="when">2022 – 2025</p>
+        <p>Affiliated with Kannur University, Kerala. Strong foundations in computer science and programming.</p>
+      </li>
+    </ul>
+
+    <h3 class="cert-title animate-reveal">Professional Certifications</h3>
+    <ul class="tags animate-reveal">
+      <li>Machine Learning with Python – IBM (Coursera), 2026</li>
+      <li>Python Data Structures – University of Michigan (Coursera), 2026</li>
+      <li>Crash Course on Python – Google (Coursera), 2026</li>
+      <li>Upcode AI Bootcamp (Python + AI) – Upcode Software Labs, 2025</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <div class="wrap">
+    <h2 class="animate-reveal">Connect With Me</h2>
+    <div class="contact animate-reveal">
+      <a href="mailto:nivedithpallipurath@gmail.com">
+        Email
+        <span>nivedithpallipurath@gmail.com</span>
+      </a>
+      <a href="tel:+918157039907">
+        Phone
+        <span>+91 8157039907</span>
+      </a>
+      <a href="https://linkedin.com/in/nivedith-p" target="_blank" rel="noopener noreferrer">
+        LinkedIn
+        <span>linkedin.com/in/nivedith-p</span>
+      </a>
+      <a href="https://github.com/nivedithp" target="_blank" rel="noopener noreferrer">
+        GitHub
+        <span>github.com/nivedithp</span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap footer-wrap">
+    <div class="footer-bat">
+      <svg viewBox="0 0 205 75"><path d="M 0,42 L 18,33 L 37,33 L 50,40 L 59,54 L 70,50 L 87,52 L 98,62 L 103,74 L 107,64 L 116,54 L 124,50 L 136,50 L 145,54 L 150,45 L 164,34 L 181,32 L 204,40 L 186,18 L 173,9 L 155,2 L 141,0 L 137,10 L 128,20 L 112,28 L 108,16 L 105,22 L 100,22 L 96,16 L 94,27 L 90,28 L 75,20 L 68,13 L 64,1 L 59,0 L 40,5 L 22,15 L 6,31 Z"/></svg>
+      <span>© 2026 Nivedith P · Gotham AI Protocol</span>
+    </div>
+    <div style="color:var(--muted); font-size:0.88rem;">
+      Engineered for high performance
+    </div>
+  </div>
+</footer>
+
+<!-- Interactive Scripts & Animations -->
+<script>
+(function(){
+  // Searchlight & Bat-Signal pointer tracker
+  var hero = document.querySelector('.hero');
+  var projector = document.querySelector('.bat-signal-projector');
+  
+  if (hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    function updateLight(x, y) {
+      var rect = hero.getBoundingClientRect();
+      var posX = Math.max(0, Math.min(rect.width, x - rect.left));
+      var posY = Math.max(0, Math.min(rect.height, y - rect.top));
+      hero.style.setProperty('--x', posX + 'px');
+      hero.style.setProperty('--y', posY + 'px');
+    }
+    
+    hero.addEventListener('pointermove', function(e) {
+      updateLight(e.clientX, e.clientY);
+    });
+    hero.addEventListener('pointerdown', function(e) {
+      updateLight(e.clientX, e.clientY);
+    });
+  }
+
+  // 3D Tilt on Batman Card
+  var card = document.getElementById('batmanCard');
+  if (card && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    card.addEventListener('mousemove', function(e) {
+      var rect = card.getBoundingClientRect();
+      var x = e.clientX - rect.left - rect.width / 2;
+      var y = e.clientY - rect.top - rect.height / 2;
+      var rotX = -(y / rect.height) * 16;
+      var rotY = (x / rect.width) * 16;
+      card.style.transform = 'perspective(1000px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateY(-6px)';
+    });
+    card.addEventListener('mouseleave', function() {
+      card.style.transform = '';
+    });
+  }
+
+  // IntersectionObserver Scroll Reveal Animations
+  var revealElements = document.querySelectorAll('.animate-reveal');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries, obs) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(function(el) {
+      observer.observe(el);
+    });
+  } else {
+    revealElements.forEach(function(el) {
+      el.classList.add('revealed');
+    });
+  }
+
+  // Batman Dynamic Cursor Follower & Click Effects
+  var batGlow = document.getElementById('batCursorGlow');
+  if (batGlow && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var mouseX = -100, mouseY = -100;
+    var curX = -100, curY = -100;
+    var isMoving = false;
+
+    window.addEventListener('mousemove', function(e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!isMoving) {
+        curX = mouseX;
+        curY = mouseY;
+        isMoving = true;
+      }
+      batGlow.style.opacity = '0.9';
+    });
+
+    document.addEventListener('mouseleave', function() {
+      batGlow.style.opacity = '0';
+    });
+
+    function animateBatCursor() {
+      curX += (mouseX - curX) * 0.22;
+      curY += (mouseY - curY) * 0.22;
+      batGlow.style.transform = 'translate3d(' + curX + 'px, ' + curY + 'px, 0) translate(-50%, -50%)';
+      requestAnimationFrame(animateBatCursor);
+    }
+    requestAnimationFrame(animateBatCursor);
+
+    // Interactive element hover detection
+    var interactiveElements = document.querySelectorAll('a, button, .btn, .tags li, .case, .contact a, [role="button"], input, label, .batman-card, .mark');
+    interactiveElements.forEach(function(elem) {
+      elem.addEventListener('mouseenter', function() {
+        batGlow.classList.add('is-hovering');
+      });
+      elem.addEventListener('mouseleave', function() {
+        batGlow.classList.remove('is-hovering');
+      });
+    });
+
+    // Batarang click ripple animation
+    window.addEventListener('mousedown', function(e) {
+      batGlow.classList.add('is-clicking');
+      var ripple = document.createElement('div');
+      ripple.className = 'bat-ripple';
+      ripple.style.left = e.clientX + 'px';
+      ripple.style.top = e.clientY + 'px';
+      ripple.style.width = '24px';
+      ripple.style.height = '24px';
+      document.body.appendChild(ripple);
+      setTimeout(function() {
+        if (ripple.parentNode) ripple.parentNode.removeChild(ripple);
+      }, 520);
+    });
+
+    window.addEventListener('mouseup', function() {
+      batGlow.classList.remove('is-clicking');
+    });
+  }
+
+})();
+</script>
+
+<!-- Batman Custom Cursor Follower -->
+<div class="bat-cursor-glow" id="batCursorGlow" aria-hidden="true">
+  <svg viewBox="0 0 205 75">
+    <path d="M 0,42 L 18,33 L 37,33 L 50,40 L 59,54 L 70,50 L 87,52 L 98,62 L 103,74 L 107,64 L 116,54 L 124,50 L 136,50 L 145,54 L 150,45 L 164,34 L 181,32 L 204,40 L 186,18 L 173,9 L 155,2 L 141,0 L 137,10 L 128,20 L 112,28 L 108,16 L 105,22 L 100,22 L 96,16 L 94,27 L 90,28 L 75,20 L 68,13 L 64,1 L 59,0 L 40,5 L 22,15 L 6,31 Z"/>
+  </svg>
+</div>
+
+</body>
+</html>
